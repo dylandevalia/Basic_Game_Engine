@@ -25,22 +25,28 @@ public class KeyInput extends KeyAdapter{
             if(tempObject.getID() == ID.Player_2){
                 if(key == KeyEvent.VK_UP){
                     moveUp(tempObject);
-                } else if(key == KeyEvent.VK_DOWN){
+                }
+                if(key == KeyEvent.VK_DOWN){
                     moveDown(tempObject);
-                } else if(key == KeyEvent.VK_LEFT){
+                }
+	            if(key == KeyEvent.VK_LEFT){
                     moveLeft(tempObject);
-                } else if(key == KeyEvent.VK_RIGHT){
+                }
+	            if(key == KeyEvent.VK_RIGHT){
                     moveRight(tempObject);
                 }
             }
             if(tempObject.getID() == ID.Player_1){
                 if(key == KeyEvent.VK_W){
                     moveUp(tempObject);
-                } else if(key == KeyEvent.VK_S){
+                }
+	            if(key == KeyEvent.VK_S){
                     moveDown(tempObject);
-                } else if(key == KeyEvent.VK_A){
+                }
+	            if(key == KeyEvent.VK_A){
                     moveLeft(tempObject);
-                } else if(key == KeyEvent.VK_D){
+                }
+	            if(key == KeyEvent.VK_D){
                     moveRight(tempObject);
                 }
             }
