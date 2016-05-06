@@ -63,21 +63,21 @@ public class KeyInput extends KeyAdapter{
 
     public void moveUp(Game_Object tempObject){
         tempObject.setvelY(-5);
-        tempObject.setvelX(0);
+        //tempObject.setvelX(0);
     }
 
     public void moveDown(Game_Object tempObject){
         tempObject.setvelY(5);
-        tempObject.setvelX(0);
+        //tempObject.setvelX(0);
     }
 
     public void moveLeft(Game_Object tempObject){
         tempObject.setvelX(-5);
-        tempObject.setvelY(0);
+        //tempObject.setvelY(0);
     }
 
     public void moveRight(Game_Object tempObject){
-        tempObject.setvelY(0);
+        //tempObject.setvelY(0);
         tempObject.setvelX(5);
     }
 
