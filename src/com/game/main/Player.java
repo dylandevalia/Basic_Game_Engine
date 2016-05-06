@@ -21,16 +21,16 @@ public class Player extends Game_Object{
         if(isXedge(getX())){
             Debug.print(1,"X Wall Found At:" + y );
             if(getX() + 42 >= Game.WIDTH){
-                velX = -1;
+                velX = -5;
             } else {
-                velX = 1;
+                velX = 5;
             }
         } else if (isYedge(getY())){
             Debug.print(1,"Y Wall Found At:" + x );
             if(getY() + 52 >= Game.HEIGHT){
-                velY = -1;
+                velY = -5;
             } else {
-                velY = 1;
+                velY = 5;
             }
         } else {
         }
