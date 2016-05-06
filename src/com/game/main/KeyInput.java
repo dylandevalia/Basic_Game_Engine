@@ -62,19 +62,23 @@ public class KeyInput extends KeyAdapter{
     }
 
     public void moveUp(Game_Object tempObject){
-        tempObject.setY(tempObject.getY() - 5);
+        tempObject.setvelY(-5);
+        tempObject.setvelX(0);
     }
 
     public void moveDown(Game_Object tempObject){
-        tempObject.setY(tempObject.getY() + 5);
+        tempObject.setvelY(5);
+        tempObject.setvelX(0);
     }
 
     public void moveLeft(Game_Object tempObject){
-        tempObject.setX(tempObject.getX() - 5);
+        tempObject.setvelX(-5);
+        tempObject.setvelY(0);
     }
 
     public void moveRight(Game_Object tempObject){
-        tempObject.setX(tempObject.getX() + 10);
+        tempObject.setvelY(0);
+        tempObject.setvelX(5);
     }
 
     boolean Freeze = false;

@@ -23,7 +23,6 @@ public class Game extends Canvas implements Runnable{
         handler = new Handler();
         this.addKeyListener(new KeyInput(handler));
 
-
         /**
         Random rand = new Random();
         for(int i = 0; i < 40 ; i++){

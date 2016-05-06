@@ -33,8 +33,6 @@ public class Player extends Game_Object{
                 velY = 1;
             }
         } else {
-            velX = 0;
-            velY = 0;
         }
         x += velX;
         y += velY;
@@ -63,7 +61,7 @@ public class Player extends Game_Object{
     }
 
     public boolean isYedge(int y){
-        if(y <= 10 || y + 42 >= Game.HEIGHT){
+        if(y <= 10 || y + 52 >= Game.HEIGHT){
             return true;
         }
         return false;
