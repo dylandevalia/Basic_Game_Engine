@@ -27,7 +27,7 @@ public class Player extends Game_Object{
             }
         } else if (isYedge(getY())){
             Debug.print(1,"Y Wall Found At:" + x );
-            if(getY() + 42 >= Game.HEIGHT){
+            if(getY() + 52 >= Game.HEIGHT){
                 velY = -1;
             } else {
                 velY = 1;
