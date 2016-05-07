@@ -1,6 +1,7 @@
 package com.game.main;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 /**
  * Created by Overlord Main on 06/05/2016.
@@ -12,13 +13,21 @@ public abstract class Game_Object {
     protected int x, y;
     protected ID id;
     protected int velX, velY;
-
+    protected BufferedImage background;
 
     public Game_Object(int x, int y, ID id){
         this.x = x;
         this.y = y;
         this.id = id;
     }
+
+    public Game_Object(int x, int y, ID id, BufferedImage background){
+        this.x = x;
+        this.y = y;
+        this.id = id;
+        this.background = background;
+    }
+
 
     public abstract void tick();
     public abstract void render(Graphics g);

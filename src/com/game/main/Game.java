@@ -1,7 +1,10 @@
 package com.game.main;
-
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 import java.util.Random;
 
 /**
@@ -13,15 +16,32 @@ public class Game extends Canvas implements Runnable{
     private Handler handler;
 
 
-    public static final int WIDTH = 640;
-    public static final int HEIGHT = WIDTH / 12 * 9;
+    //public static final int WIDTH = 640;
+    //public static final int HEIGHT = WIDTH / 12 * 9;
+
+    public static final int WIDTH = 1024;
+    public static final int HEIGHT = WIDTH / 2;
 
     private boolean running = false;
+
+    BufferedImage background = null;
 
     public Game(){
         new Window(WIDTH, HEIGHT, "Lets Fuck Shit Up", this);
         handler = new Handler();
+
         this.addKeyListener(new KeyInput(handler));
+        try {
+            background = ImageIO.read(new File("res/sky.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        handler.addObject(new Background(0,0,ID.Skybox,background));
+        handler.addObject(new Player(100,100,ID.Player_1));
+        handler.addObject(new Player(200,200,ID.Player_2));
+        handler.addObject(new Player(200,200,ID.Enemy));
+
 
         /**
         Random rand = new Random();
@@ -31,9 +51,6 @@ public class Game extends Canvas implements Runnable{
             handler.addObject(new Player(x,y,ID.Player_1));
         }*/
 
-        handler.addObject(new Player(100,100,ID.Player_1));
-        handler.addObject(new Player(200,200,ID.Player_2));
-        handler.addObject(new Player(200,200,ID.Enemy));
     }
 
     /**
@@ -64,7 +81,8 @@ public class Game extends Canvas implements Runnable{
         handler.tick();
     }
 
-    void render(){
+
+    void render() {
         BufferStrategy bs = getBufferStrategy();
 
         if(bs == null){

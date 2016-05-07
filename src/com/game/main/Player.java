@@ -7,11 +7,6 @@ import java.awt.*;
  */
 public class Player extends Game_Object{
 
-    boolean bounceX = false;
-    boolean bounceY = false;
-
-
-
     public Player(int x, int y, ID id){
         super(x,y,id);
     }

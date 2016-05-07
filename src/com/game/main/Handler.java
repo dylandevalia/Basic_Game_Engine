@@ -22,6 +22,10 @@ public class Handler {
         }
     }
 
+
+
+
+
     public void render(Graphics g){
 
         if(object.size() == 0){

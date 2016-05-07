@@ -8,4 +8,5 @@ public enum ID {
     Player_1(),
     Player_2(),
     Enemy(),
+    Skybox(),
 }
