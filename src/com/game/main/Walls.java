@@ -23,7 +23,7 @@ public class Walls extends Game_Object {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(wall, x, y, wall.getWidth(), wall.getHeight() / 2, null);
+        g.drawImage(wall, x, y, wall.getWidth() / 3, wall.getHeight() / 3, null);
     }
 
 }
