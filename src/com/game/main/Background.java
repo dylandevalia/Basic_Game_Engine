@@ -19,13 +19,11 @@ public class Background extends Game_Object {
 
     @Override
     public void tick() {
-
     }
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(background, 0, 0, background.getWidth(), background.getHeight() / 2, null);
+        g.drawImage(background, x, y, background.getWidth(), background.getHeight() / 2, null);
     }
-
 
 }

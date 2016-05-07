@@ -1,6 +1,9 @@
 package com.game.main;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
 
 /**
@@ -21,9 +24,6 @@ public class Handler {
             tempObject.tick();
         }
     }
-
-
-
 
 
     public void render(Graphics g){

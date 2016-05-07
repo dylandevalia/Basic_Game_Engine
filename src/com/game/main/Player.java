@@ -1,6 +1,7 @@
 package com.game.main;
 
 import java.awt.*;
+import java.util.LinkedList;
 
 /**
  * Created by Overlord Main on 06/05/2016.
@@ -14,14 +15,14 @@ public class Player extends Game_Object{
     @Override
     public void tick() {
         if(isXedge(getX())){
-            Debug.print(1,"X Wall Found At:" + y );
+            Debug.print(1,"X Wall Found At: " + x + " : " + y);
             if(getX() + 42 >= Game.WIDTH){
                 velX = -5;
             } else {
                 velX = 5;
             }
         } else if (isYedge(getY())){
-            Debug.print(1,"Y Wall Found At:" + x );
+            Debug.print(1,"Y Wall Found At: " + x + " : " + y);
             if(getY() + 52 >= Game.HEIGHT){
                 velY = -5;
             } else {

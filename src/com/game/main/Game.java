@@ -5,6 +5,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
+import java.util.LinkedList;
 import java.util.Random;
 
 /**
@@ -25,22 +26,30 @@ public class Game extends Canvas implements Runnable{
     private boolean running = false;
 
     BufferedImage background = null;
+    BufferedImage ground = null;
 
     public Game(){
         new Window(WIDTH, HEIGHT, "Lets Fuck Shit Up", this);
         handler = new Handler();
-
         this.addKeyListener(new KeyInput(handler));
+
         try {
             background = ImageIO.read(new File("res/sky.jpg"));
+            ground = ImageIO.read(new File("res/ground_1.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         handler.addObject(new Background(0,0,ID.Skybox,background));
+
+
+        //handler.addObject(new Background(0,0,ID.Wall,ground));
+
         handler.addObject(new Player(100,100,ID.Player_1));
         handler.addObject(new Player(200,200,ID.Player_2));
         handler.addObject(new Player(200,200,ID.Enemy));
+        handler.addObject(new Walls(0,HEIGHT - 200,ID.Wall,ground));
+
 
 
         /**

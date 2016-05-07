@@ -9,4 +9,5 @@ public enum ID {
     Player_2(),
     Enemy(),
     Skybox(),
+    Wall(),
 }
